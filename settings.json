@@ -1,0 +1,495 @@
+{
+  "_note": "Configuration for the Screening Reconciliation Command Center client. Keep this file in the same shared folder as ReconClient.html and the feed files; the client re-reads it automatically.",
+  "_savedAt": "2026-11-04T15:10:26.906Z",
+  "version": 3,
+  "branding": {
+    "appName": "Screening Reconciliation Command Center",
+    "subtitle": "GCOP (Dow Jones) · FINSCAN (Worldcheck / SEPA Blacklist) · OPF action feed",
+    "showSubtitle": true,
+    "logos": {
+      "dark": {
+        "mode": "preset",
+        "preset": "shield",
+        "text": "RC",
+        "bg": "#4da3ff",
+        "fg": "#ffffff",
+        "shape": "rounded",
+        "size": 50,
+        "image": ""
+      },
+      "light": {
+        "mode": "preset",
+        "preset": "shield",
+        "text": "RC",
+        "bg": "#1d6fd6",
+        "fg": "#ffffff",
+        "shape": "rounded",
+        "size": 50,
+        "image": ""
+      }
+    }
+  },
+  "theme": {
+    "mode": "light",
+    "scale": 1,
+    "fontSize": 14,
+    "fontFamily": "system",
+    "radius": 14
+  },
+  "colors": {
+    "dark": {
+      "--src-g": "#15803d",
+      "--src-f": "#1d4ed8"
+    },
+    "light": {
+      "--src-g": "#15803d",
+      "--src-f": "#1d4ed8"
+    }
+  },
+  "ribbon": {
+    "height": 15,
+    "fontSize": 10,
+    "items": [
+      "mode",
+      "conn",
+      "feeds",
+      "last",
+      "print",
+      "theme",
+      "perf"
+    ]
+  },
+  "source": {
+    "mode": "live",
+    "method": "folder",
+    "baseUrl": "",
+    "files": {
+      "gcop": "GCOP.csv",
+      "finscan": "FINSCAN.csv",
+      "opf": "OPF.csv",
+      "customers": "Customers.csv"
+    },
+    "pollMinutes": 5,
+    "staleMinutes": 15,
+    "customersEnabled": true,
+    "customersRefreshHours": 24,
+    "customersStaleHours": 36
+  },
+  "feeds": {
+    "gcop": {
+      "columns": [
+        {
+          "key": "cif",
+          "label": "CIF",
+          "headers": [
+            "CIF"
+          ],
+          "role": "cif",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_0",
+          "label": "CIF",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_1",
+          "label": "ClientName",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_2",
+          "label": "SanctionListName",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_3",
+          "label": "GCOP/FINSCANIdentifier",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": false,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_4",
+          "label": "Branch",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_5",
+          "label": "TransactionID",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_6",
+          "label": "Amount",
+          "headers": [],
+          "role": "",
+          "type": "number",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_7",
+          "label": "Currency",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_8",
+          "label": "BusinessDate",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_9",
+          "label": "Timestamp",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        }
+      ]
+    },
+    "finscan": {
+      "columns": [
+        {
+          "key": "cif",
+          "label": "CIF",
+          "headers": [
+            "CIF"
+          ],
+          "role": "cif",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_0",
+          "label": "CIF",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_1",
+          "label": "ClientName",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_2",
+          "label": "SanctionListName",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_3",
+          "label": "GCOP/FINSCANIdentifier",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": false,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_4",
+          "label": "Branch",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_5",
+          "label": "TransactionID",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_6",
+          "label": "Amount",
+          "headers": [],
+          "role": "",
+          "type": "number",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_7",
+          "label": "Currency",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_8",
+          "label": "BusinessDate",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_9",
+          "label": "Timestamp",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        }
+      ]
+    },
+    "opf": {
+      "columns": [
+        {
+          "key": "cif",
+          "label": "CIF",
+          "headers": [
+            "CIF"
+          ],
+          "role": "cif",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_0",
+          "label": "CIF",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_1",
+          "label": "ClientName",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "c_2",
+          "label": "Branch",
+          "headers": [],
+          "role": "",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        }
+      ]
+    },
+    "customers": {
+      "columns": [
+        {
+          "key": "cif",
+          "label": "CIF",
+          "headers": [
+            "CIF",
+            "CIFNumber",
+            "CustomerID",
+            "CustomerCIF"
+          ],
+          "role": "cif",
+          "type": "text",
+          "required": true,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "name",
+          "label": "ClientName",
+          "headers": [
+            "ClientName",
+            "CustomerName",
+            "Name"
+          ],
+          "role": "name",
+          "type": "text",
+          "required": false,
+          "table": false,
+          "drawer": false
+        },
+        {
+          "key": "branch",
+          "label": "Branch",
+          "headers": [
+            "Branch",
+            "BranchName"
+          ],
+          "role": "branch",
+          "type": "text",
+          "required": false,
+          "table": false,
+          "drawer": false
+        }
+      ]
+    }
+  },
+  "timeline": {
+    "rangeHours": 24,
+    "startExpanded": false,
+    "playSpeedMs": 1000
+  },
+  "reconciliation": {
+    "alertMinutes": 15,
+    "matchByTxnWhenCifMissing": true,
+    "ignoreLeadingZeros": false,
+    "dateOrder": "dmy"
+  },
+  "labels": {
+    "gcop": "G",
+    "finscan": "F"
+  },
+  "table": {
+    "pageSize": 25,
+    "columns": [
+      "cif",
+      "name",
+      "branch",
+      "source",
+      "lists",
+      "txns",
+      "amount",
+      "date",
+      "ts",
+      "opf"
+    ],
+    "sortKey": "opf",
+    "sortDir": "asc"
+  },
+  "panels": {
+    "visible": [
+      "status",
+      "timeline",
+      "alert",
+      "kpis",
+      "venn",
+      "heat",
+      "branch",
+      "trend",
+      "dq",
+      "table"
+    ],
+    "order": [
+      "status",
+      "timeline",
+      "alert",
+      "kpis",
+      "venn",
+      "heat",
+      "branch",
+      "trend",
+      "dq",
+      "table"
+    ]
+  },
+  "kpis": {
+    "visible": [
+      "customers",
+      "total",
+      "gcopOnly",
+      "finscanOnly",
+      "both",
+      "actioned",
+      "notActioned"
+    ],
+    "labels": {
+      "customers": "",
+      "total": "",
+      "gcopOnly": "",
+      "finscanOnly": "",
+      "both": "",
+      "actioned": "",
+      "notActioned": ""
+    }
+  },
+  "monitor": {
+    "enabled": true,
+    "file": "SystemMetrics.json",
+    "refreshSeconds": 15,
+    "warnPct": 70,
+    "critPct": 90,
+    "staleMinutes": 5
+  },
+  "chat": {
+    "enabled": true,
+    "useRemote": false,
+    "endpoint": ""
+  }
+}
